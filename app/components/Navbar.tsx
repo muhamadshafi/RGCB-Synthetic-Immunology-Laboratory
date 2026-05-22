@@ -7,41 +7,35 @@ export default function Navbar({ settings }: NavbarProps) {
   return (
 
     <nav
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        boxSizing: 'border-box',
+  style={{
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    boxSizing: 'border-box',
 
-        backgroundColor:
-          settings?.navbarBackgroundColor || 'rgba(0,0,0,0.85)',
+    backgroundColor:
+      settings?.navbarBackgroundColor || 'rgba(0,0,0,0.85)',
 
-        backgroundColor:
-  settings?.navbarBackgroundColor || 'rgba(0,0,0,0.85)',
+    backgroundImage:
+      settings?.navbarBackgroundImage
+        ? `url(${settings.navbarBackgroundImage})`
+        : 'none',
 
-backgroundImage:
-  settings?.navbarBackgroundImage &&
-  settings.navbarBackgroundImage !== settings.heroImage
-    ? `url(${settings.navbarBackgroundImage})`
-    : 'none',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
 
-backgroundSize: 'cover',
-backgroundPosition: 'center',
-backgroundRepeat: 'no-repeat',
+    padding: '15px 30px',
 
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
 
-        padding: '15px 30px',
-
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-
-        zIndex: 1000
-      }}
-    >
+    zIndex: 1000
+  }}
+>
+  
 
       {/* TITLE */}
 
