@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 async function getHomepage() {
 
   const res = await fetch(
-    '/api/homepage`,
+    '/api/homepage',
     { cache: 'no-store' }
   )
 
@@ -13,7 +13,7 @@ async function getHomepage() {
 async function getGallery() {
 
   const res = await fetch(
-    '/api/gallery`,
+    '/api/gallery',
     { cache: 'no-store' }
   )
 
