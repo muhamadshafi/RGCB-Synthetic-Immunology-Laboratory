@@ -3,8 +3,8 @@ import Navbar from '../../components/Navbar'
 async function getHomepage() {
 
   const res = await fetch(
-    '/api/homepage',
-    { cache: 'no-store' }
+  `${process.env.NEXT_PUBLIC_SITE_URL}/api/homepage`,
+  { cache: 'no-store' }
   )
 
   return res.json()
@@ -12,9 +12,9 @@ async function getHomepage() {
 
 async function getPerson(id: string) {
 
-  const res = await fetch(
-    '/api/people/${id}',
-    { cache: 'no-store' }
+    const res = await fetch(
+  `${process.env.NEXT_PUBLIC_SITE_URL}/api/people/${id}`,
+  { cache: 'no-store' }
   )
 
   return res.json()

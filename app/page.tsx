@@ -4,8 +4,8 @@ async function getHomepage() {
 
   const res = await fetch(
   `${process.env.NEXT_PUBLIC_SITE_URL}/api/homepage`,
-  { cache: 'no-store'
-
+  { cache: 'no-store'}
+  )
   return res.json()
 }
 
@@ -13,7 +13,7 @@ async function getHighlights() {
 
   const res = await fetch(
     '/api/highlights',
-    { cache: 'no-store' }
+    { cache: 'no-store'}
   )
 
   return res.json()
