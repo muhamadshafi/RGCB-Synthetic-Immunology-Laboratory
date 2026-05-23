@@ -13,7 +13,7 @@ async function getHomepage() {
 async function getContact() {
 
   const res = await fetch(
-    '${process.env.NEXT_PUBLIC_SITE_URL}/api/contact',
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/contact`,
     { cache: 'no-store' }
   )
 

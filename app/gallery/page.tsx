@@ -13,7 +13,7 @@ async function getHomepage() {
 async function getGallery() {
 
   const res = await fetch(
-    '${process.env.NEXT_PUBLIC_SITE_URL}/api/gallery',
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/gallery`,
     { cache: 'no-store' }
   )
 
