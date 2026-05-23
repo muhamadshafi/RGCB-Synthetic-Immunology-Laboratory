@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 async function getHomepage() {
 
   const res = await fetch(
-    '${process.env.NEXT_PUBLIC_SITE_URL}/api/homepage',
+    '/api/homepage`,
     { cache: 'no-store' }
   )
 
@@ -13,7 +13,7 @@ async function getHomepage() {
 async function getPeople() {
 
   const res = await fetch(
-    '${process.env.NEXT_PUBLIC_SITE_URL}/api/people',
+    '/api/people`,
     { cache: 'no-store' }
   )
 
