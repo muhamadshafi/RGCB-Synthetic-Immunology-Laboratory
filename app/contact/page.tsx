@@ -3,8 +3,8 @@ import Navbar from '../components/Navbar'
 async function getHomepage() {
 
   const res = await fetch(
-    '/api/homepage',
-    { cache: 'no-store' }
+  `${process.env.NEXT_PUBLIC_SITE_URL}/api/homepage`,
+  { cache: 'no-store' }
   )
 
   return res.json()
@@ -13,8 +13,8 @@ async function getHomepage() {
 async function getContact() {
 
   const res = await fetch(
-    '/api/contact',
-    { cache: 'no-store' }
+  `${process.env.NEXT_PUBLIC_SITE_URL}/api/contact`,
+  { cache: 'no-store' }
   )
 
   return res.json()
