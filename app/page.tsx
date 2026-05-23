@@ -12,8 +12,8 @@ async function getHomepage() {
 async function getHighlights() {
 
   const res = await fetch(
-    '/api/highlights',
-    { cache: 'no-store'}
+  `${process.env.NEXT_PUBLIC_SITE_URL}/api/highlights`,
+  { cache: 'no-store'}
   )
 
   return res.json()
