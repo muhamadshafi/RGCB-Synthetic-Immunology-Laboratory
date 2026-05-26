@@ -3,8 +3,8 @@ import Navbar from '../../components/Navbar'
 async function getHomepage() {
 
   const res = await fetch(
-  `${process.env.NEXT_PUBLIC_SITE_URL}/api/homepage`,
-  { cache: 'no-store' }
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/homepage`,
+    { cache: 'no-store' }
   )
 
   return res.json()
@@ -13,8 +13,8 @@ async function getHomepage() {
 async function getAlbum(id: string) {
 
   const res = await fetch(
-  `${process.env.NEXT_PUBLIC_SITE_URL}/api/allery/${id}`,
-  { cache: 'no-store' }
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/gallery/${id}`,
+    { cache: 'no-store' }
   )
 
   return res.json()
@@ -64,6 +64,7 @@ export default async function GalleryAlbumPage({
           controls
           style={{
             width: '100%',
+            maxWidth: '1000px',
             borderRadius: '20px',
             marginBottom: '40px'
           }}
@@ -83,23 +84,27 @@ export default async function GalleryAlbumPage({
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))',
+          gridTemplateColumns:
+            'repeat(auto-fit,minmax(300px,1fr))',
+
           gap: '30px'
         }}
       >
 
-        {album.images?.map((image: any, index: number) => (
+        {album.images?.map(
+          (image: any, index: number) => (
 
-          <img
-            key={index}
-            src={image.url}
-            style={{
-              width: '100%',
-              borderRadius: '20px'
-            }}
-          />
+            <img
+              key={index}
+              src={image.url}
+              style={{
+                width: '100%',
+                borderRadius: '20px'
+              }}
+            />
 
-        ))}
+          )
+        )}
 
       </div>
 
